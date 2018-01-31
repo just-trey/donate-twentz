@@ -1,0 +1,23 @@
+.loader {
+  position: relative;
+  margin: 1.25em auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  border: solid 6px $gray;
+  border-top-color: $secondary-blue;
+  animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

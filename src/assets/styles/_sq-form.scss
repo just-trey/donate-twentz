@@ -1,0 +1,41 @@
+      .sq-input {
+        border: 1px solid #e3e3e3;
+        box-shadow: none;
+        width: 100%;
+        font-weight: 200;
+      }
+
+      .sq-input--focus {
+        /* Indicates how form inputs should appear when they have focus */
+        outline: 5px auto rgb(59, 153, 252);
+      }
+
+      .sq-input--error {
+        /* Indicates how form inputs should appear when they contain invalid values */
+        outline: 5px auto rgba(176, 47, 51, .3);
+      }
+
+      .error-box {
+        background: rgba(176, 47, 51, 1);
+        border-radius: 0;
+        color: rgba(255, 255, 255, .8);
+        margin: 1.5em 0;
+        width: 100%;
+        padding: 0.5em;
+        text-align: left;
+        outline: 5px auto rgba(176, 47, 51, .3);
+        a {
+          color: yellow;
+          text-decoration: underline;
+          &:active,
+          &:hover,
+          &:visited {
+            text-decoration: none;
+          }
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      }

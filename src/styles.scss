@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main-body {
+  background-color: #559643;
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+@import '~modularscale-sass/stylesheets/modularscale';
+@import 'mixins';
+@import 'colors';
+@import 'breakpoints';
+@import 'font-settings';
+@import 'typography';
+@import 'default';
+@import 'action-box';
+@import 'form-elements';
+@import 'buttons';
+@import 'loader';
+@import 'helpers';
+@import 'header';
+@import 'sq-form';
+@import 'costs';
+.form-top {
+  margin-top: 2em;
+}

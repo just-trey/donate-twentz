@@ -1,0 +1,58 @@
+header {
+  background-color: $primary-blue;
+  margin: 0;
+  width: 100%;
+  z-index: 700;
+  position: absolute;
+  h1 {
+    text-align: center;
+    padding-top: .75em;
+    a {
+      font-size: ms(6);
+      &:active,
+      &:hover,
+      &:visited {
+        color: $secondary-blue;
+        text-decoration: none;
+      }
+    }
+  }
+  a,
+  .site-description {
+    color: $secondary-blue;
+    text-align: center;
+    padding-bottom: 1em;
+    margin: 0;
+  }
+}
+
+footer {
+  background-color: $primary-red;
+  margin: 0;
+  padding: .75em;
+  p {
+    color: $white;
+    font-weight: $light-weight;
+    text-align: center;
+  }
+}
+
+// h1 {
+//   font-size: ms(10);
+//   text-align: center;
+//   color: #6bb9d8;
+// }
+// h1,
+// h2,
+// .sub-head {
+//   font-family: 'Amatic SC';
+//   font-weight: $regular-weight;
+// }
+// h2 {
+//   font-size: ms(5);
+//   margin: 0;
+//   color: $charcoal;
+//   @include tablet-landscape-up {
+//     font-size: ms(7);
+//   }
+// }

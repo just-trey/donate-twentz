@@ -1,0 +1,34 @@
+<div class="action-box">
+
+  <div *ngIf="!checkPayment && !pushError">
+    <h2>You're all set!</h2>
+    <p>Mark your calendar! We'll see you on October 22nd!</p>
+  </div>
+
+  <div *ngIf="checkPayment && !pushError">
+    <h2>Great, we have recorded your registration</h2>
+    <p>Once we receive your check, we'll send you an email to confirm your registration.</p>
+    <p>Please send a check for <strong>{{total | currency:'USD':true}}</strong> to:</p>
+    <blockquote>
+      Tyler Wentz Memorial Fund
+      <br> Attn: Registration
+      <br> 12510 Evansdale Road
+      <br> Henrico, VA 23233
+    </blockquote>
+  </div>
+
+  <div *ngIf="checkPayment && pushError">
+    <h2>Well, this is awkward. I'm really sorry.</h2>
+    <p *ngIf="checkPayment && pushError" class="error-text">
+      For some crazy reason, your registration did not get processed. Please send an email to
+      <a href="admin@twentz.com">admin@twentz.com</a> and I'll try to get this fixed.</p>
+  </div>
+
+  <div *ngIf="!checkPayment && pushError">
+    <h2>We have some good news and...well, just read below...</h2>
+    <p>
+      So, your payment was a success, <span class="error-text">but for some crazy reason, your player information did not get saved.
+      </span> We were able to get your email address so we will be emailing you to get player information.
+      If you want to send an email to <a href="admin@twentz.com">admin@twentz.com</a>, you can. I'm going
+      to be taking a look to see what went wrong, sorry about this.</p>
+  </div>

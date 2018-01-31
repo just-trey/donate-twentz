@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    Buttons
+\*------------------------------------*/
+
+.button-row {
+  @include tablet-portrait-up {
+    max-width: 21.75em;
+    margin: auto;
+  }
+}
+
+.button-row-wide {
+  @include tablet-portrait-up {
+    max-width: 30em;
+    margin: auto;
+  }
+}
+
+%button-base {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-weight: $regular-weight;
+  font-size: ms(0);
+  padding: 0.75em 1em;
+  transition: all 75ms ease-in-out;
+  width: 100%;
+  align-content: center;
+}
+
+@mixin button($color, $background, $inverted) {
+  color: $color;
+  @if $inverted==true {
+    background-color: transparent;
+    border-color: $color;
+  }
+  @else {
+    background-color: $background;
+    border-color: $background;
+  }
+  &:not([disabled]):active,
+  &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    // just in case this is a link, don't underline the text
+    text-decoration: none;
+    @if $inverted==true {
+      border-color: darken($color, 10);
+      color: darken($color, 10);
+      background-color: transparent;
+    }
+    @else {
+      background-color: darken($background, 10);
+      border-color: darken($background, 10);
+    }
+  }
+  &[disabled] {
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+    /* IE 8 */
+    opacity: 0.5;
+    &:hover {
+      // just in case this is a link, don't underline the text
+      text-decoration: none;
+    }
+  }
+}
+
+button {
+  @extend %button-base; //in case this is a link, we don't want underline
+  text-decoration: none; // Action button
+  &.action {
+    @include button($white, $primary-green-dark, false);
+  } // Progressive button
+  &.progressive {
+    @include button($white, $secondary-blue-dark, false);
+  } // Regressive button
+  &.regressive {
+    @include button($white, $gray-darker, false);
+  } // Destructive button
+  &.destructive {
+    @include button($white, $primary-red, false);
+  } // Inverted Buttons
+  &.action-inverted {
+    @include button($white, $primary-green-dark, false);
+  }
+  &.progressive-inverted {
+    @include button($secondary-blue, $secondary-blue-dark, true);
+  }
+  &.regressive-inverted {
+    @include button($gray-darker, $gray-darker, true);
+  }
+  &.destructive-inverted {
+    @include button($white, $primary-red, false);
+  } // Inverted White button
+  &.inverted-white {
+    @include button($white, $white, true);
+  }
+}

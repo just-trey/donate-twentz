@@ -1,0 +1,84 @@
+/*------------------------------------*\
+         Page default styles
+\*------------------------------------*/
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+// styles below are meant to handle common browser issues and standards
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+// removes extra down arrow from dropdown on IE10+ --> investigate/confirm --> OneUI
+select::-ms-expand {
+  display: none;
+}
+
+//hide content for usability needs
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+// hide content on mobile
+.mobile-hidden {
+  display: block;
+  @include phone-only {
+    display: none !important;
+  }
+}
+
+// show content on mobile only
+.mobile-only {
+  display: block;
+  @include tablet-portrait-up {
+    display: none !important;
+  }
+}
+
+.main-body {
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 3em;
+  padding-top: 6em;
+  @include tablet-portrait-up {
+    padding-top: 7em;
+  }
+  .heading {
+    padding-top: 1em;
+    text-align: center;
+    font-size: ms(7);
+  }
+}
+
+.content {
+  text-align: center;
+  padding: 0 .5em;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include large-desktop-up {
+  .main-body {
+    width: 70em;
+  }
+}

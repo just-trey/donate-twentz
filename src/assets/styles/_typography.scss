@@ -1,0 +1,83 @@
+// Variables
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans:300,400,600');
+$base-font-family: 'Josefin Sans' !default;
+$font-stack: $base-font-family,
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
+// }
+// Base Typography
+html {
+  font-size: 100%;
+  font-family: $font-stack;
+  line-height: $base-line-height;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-stack;
+}
+
+//Headings
+h1,
+h2,
+.sub-head {
+  font-family: 'Amatic SC';
+  font-weight: $bold-weight;
+  font-size: ms(4);
+  margin: 0;
+  @include tablet-landscape-up {
+    font-size: ms(5);
+  }
+}
+
+.sub-head {
+  margin-bottom: .75em;
+}
+
+p,
+label {
+  font-size: ms(0);
+  margin: ms(-3);
+  @include tablet-landscape-up {
+    font-size: ms(1);
+    margin: ms(-2);
+  }
+}
+
+// Links
+a,
+a:active,
+a:hover,
+a:visited {
+  color: $secondary-blue-dark;
+  text-decoration: none;
+}
+
+a:active,
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+// Lists
+ol {
+  list-style: decimal;
+  margin: 1em 0 1em 20px;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 1em 0 1em 20px;
+}
+
+// Remove list style marker Placeholder
+%remove-list-style {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

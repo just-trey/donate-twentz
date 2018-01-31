@@ -1,0 +1,38 @@
+  .font-larger {
+    font-size: ms(1);
+  }
+
+  .font-largest {
+    font-size: ms(2);
+  }
+
+  .font-smaller {
+    font-size: ms(-1);
+  }
+
+  .font-smallest {
+    font-size: ms(-2);
+  }
+
+  .important {
+    color: $primary-red;
+  }
+
+  .breathe-top {
+    margin-top: 1em;
+  }
+
+  .center {
+    text-align: center !important;
+  }
+
+  .donate {
+    text-align: left;
+    .half-tablet-portait-up {
+      @include tablet-portrait-up {
+        width: 50%;
+        left: 0;
+        display: inline-block;
+      }
+    }
+  }
