@@ -1,12 +1,12 @@
 .action-box {
   padding: 1em;
-  background: #FFFFFF;
+  background: #d7dadb;
   border: 1px solid #55626d;
-  border-radius: .5em;
+  border-radius: 0.5em;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
   text-align: center;
   width: calc(100% - 1em);
-  margin: .5em;
+  margin: 0.5em;
   position: relative;
   @include tablet-portrait-up {
     padding: 1.5em;
@@ -17,15 +17,16 @@
       vertical-align: text-bottom;
       label {
         position: absolute;
-        margin-top: .5em;
+        margin-top: 0.5em;
       }
     }
   }
-  blockquote{
+  blockquote {
     text-align: left;
     width: auto;
     margin: 0 auto;
-    display: inline-block;  }
+    display: inline-block;
+  }
   .secure {
     padding: 1.5em;
     background-color: $gray-light;
@@ -57,7 +58,16 @@
   }
   .divider {
     margin-top: 1em;
-    padding-top: .75em;
+    padding-top: 0.75em;
     border-top: 1px solid #e3e3e3;
+  }
+  .amount-box {
+    width: 12em;
+    display: inline-block;
+    text-align: left;
+    .tiny {
+      font-size: 0.75em;
+      margin: 0;
+    }
   }
 }

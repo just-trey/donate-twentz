@@ -1,11 +1,8 @@
 // Variables
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans:300,400,600');
 $base-font-family: 'Josefin Sans' !default;
-$font-stack: $base-font-family,
-'Helvetica Neue',
-'Helvetica',
-'Arial',
-sans-serif !default;
+$font-stack: $base-font-family, 'Helvetica Neue', 'Helvetica', 'Arial',
+  sans-serif !default;
 // }
 // Base Typography
 html {
@@ -24,8 +21,7 @@ textarea {
 
 //Headings
 h1,
-h2,
-.sub-head {
+h2 {
   font-family: 'Amatic SC';
   font-weight: $bold-weight;
   font-size: ms(4);
@@ -33,10 +29,6 @@ h2,
   @include tablet-landscape-up {
     font-size: ms(5);
   }
-}
-
-.sub-head {
-  margin-bottom: .75em;
 }
 
 p,
@@ -49,6 +41,11 @@ label {
   }
 }
 
+.sub-head {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5em;
+}
 // Links
 a,
 a:active,

@@ -53,13 +53,11 @@ select::-ms-expand {
 }
 
 .main-body {
+  width: 100%;
+  max-width: 1040px;
   margin: 0 auto;
   height: 100%;
-  padding-bottom: 3em;
-  padding-top: 6em;
-  @include tablet-portrait-up {
-    padding-top: 7em;
-  }
+  padding: 0.25em 0.25em;
   .heading {
     padding-top: 1em;
     text-align: center;
@@ -69,16 +67,14 @@ select::-ms-expand {
 
 .content {
   text-align: center;
-  padding: 0 .5em;
+  padding: 0 0.5em;
+}
+
+.info {
+  font-size: ms(2);
 }
 
 p {
   margin-left: auto;
   margin-right: auto;
-}
-
-@include large-desktop-up {
-  .main-body {
-    width: 70em;
-  }
 }

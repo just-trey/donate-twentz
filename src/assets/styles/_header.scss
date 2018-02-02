@@ -2,11 +2,10 @@ header {
   background-color: $primary-blue;
   margin: 0;
   width: 100%;
-  z-index: 700;
-  position: absolute;
   h1 {
     text-align: center;
-    padding-top: .75em;
+    padding: 1em;
+    color: white;
     a {
       font-size: ms(6);
       &:active,
@@ -29,7 +28,7 @@ header {
 footer {
   background-color: $primary-red;
   margin: 0;
-  padding: .75em;
+  padding: 0.75em;
   p {
     color: $white;
     font-weight: $light-weight;

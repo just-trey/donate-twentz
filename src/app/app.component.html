@@ -1,14 +1,20 @@
-<div class="wrapper">
-  <header>
-    <h1 class="site-title"><a href="https://www.twentz.com/" rel="home">twentz.com</a></h1>
-    <p class="site-description">#TeamTyler</p>
-  </header>
-  <div class="main-body">
-    <h2 class="heading">Second Annual Tyler Wentz Memorial Golf Tournament Registration</h2>
-    <router-outlet></router-outlet>
+<form (ngSubmit)="submitForm()" ngNativeValidate>
+  <div class="action-box">
+    <div class="error-box" *ngIf="oops">Ugh! Something did not work quite right for you. Try clicking your option again. If it screws again please shoot me an
+      email at
+      <a href="mailto:admin@twentz.com">admin@twentz.com</a>
+    </div>
+    <label for="howmuch">How much would you like to donate?</label>
+    <div class="amount-box">
+      <input id="howmuch" name="amount" currencyMask [(ngModel)]="donationAmount" [options]="{ allowNegative: false, precision: 0 }"
+        required type="text">
+      <p class="tiny">Enter in whole dollar amounts only</p>
+    </div>
+    <div class="error-box" *ngIf="oops">Ugh! Something did not work quite right for you. Try clicking your option again. If it screws again please shoot me an
+      email at
+      <a href="mailto:admin@twentz.com">admin@twentz.com</a>
+    </div>
+    <!-- <p class="sub-head">Almost Done!</p> -->
+    <button type="submit" (click)="payOnline = true" class="action breathe-top" [disabled]="isProcessing">Donate online now</button>
   </div>
-</div>
-<footer>
-  <p>The Tyler Wentz Memorial Fund is a registered 501(c) (3) nonprofit organization.<br>IRS #81-4034816 Copyright © 2017 by
-    the Tyler Wentz Memorial Fund</p>
-</footer>
+</form>
